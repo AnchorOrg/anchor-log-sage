@@ -7,9 +7,9 @@
     - The time log. At the current moment , they all comes from toggl track. 
     - The daily retro on what I did good and what I did bad. 
 
-[ ] Determine platform for managing tasks along the way . 
+[x] Determine platform for managing tasks along the way . 
     - Description: 
         This is an open source project at the moment and would greatly be the protype of the insighter part of anchor log in the future. 
 
 
-[ ] Find whether there are existing projects doing the same thing in the internet. 
+[x] Find whether there are existing projects doing the same thing in the internet. 
