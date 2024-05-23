@@ -9,6 +9,7 @@ venv/
 
 # IDE
 .idea/
+.vscode
 archived/
 
 # Compiled files
@@ -21,3 +22,6 @@ archived/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# credentials
+.env
