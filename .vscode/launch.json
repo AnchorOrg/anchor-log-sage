@@ -1,0 +1,30 @@
+{ 
+    "version": "0.2.0",
+    "configurations": [  
+        {
+            "name": "TestConfiguration.test_init",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/src/",
+            "envFile": "${workspaceFolder}/.env",
+            "python": "${workspaceFolder}/venv/Scripts/python.exe",
+            "args": [
+                "tests.config.test_configuration"
+            ]
+        },
+        {
+            "name": "Run all tests",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "unittest",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "discover",   
+                "-s", "src",    
+                "-p", "tests//**",   
+            ],
+            "console": "integratedTerminal" 
+        }
+    ]
+}
