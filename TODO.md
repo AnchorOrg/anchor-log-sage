@@ -1,5 +1,5 @@
-Rezp: 
-[x] define a class to gain the data 
+[ ] configuring the tests running using the launch.json
+[ ] search about https://stackoverflow.com/questions/50977743/run-python-command-with-alias-in-command-line-like-npm
 [ ] debugging the get error. 
     - python .\src\main\toggl\retriever.py
     - analysis: 
