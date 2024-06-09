@@ -1,7 +1,3 @@
-[x] configuring the tests running using the launch.json
-[x] search about https://stackoverflow.com/questions/50977743/run-python-command-with-alias-in-command-line-like-npm
-[ ] debugging the get error. 
-    - python .\src\main\toggl\retriever.py
-    - analysis: 
-      - unable to get json data
-      - [x] Checking https://engineering.toggl.com/docs/authentication/index.html , how to authenticate myself and get the data . 
+[ ] analyzing how to get the habit data from the ticktick. 
+[ ] https://www.notion.so/lysander086/Data-ETL-and-get-API-to-gain-insights-2208732dc6fb48fa8fc1b426e1614421?pvs=4#359319ebcc8c4da48d11bc8e5d428015
+
