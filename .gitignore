@@ -12,6 +12,7 @@ venv/
 .vscode
 .run
 archived/
+secret/
 
 # Compiled files
 *.class
@@ -26,3 +27,6 @@ Thumbs.db
 
 # credentials
 .env
+
+# Ignored dir
+nuclear/

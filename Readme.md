@@ -3,8 +3,10 @@
   - Reduce time of retrospecting past
   - provide data-driven insights on how to improve the usage status of one's time.
 
-## Resources
+# Resources
 - [Project panel](https://lysander086.notion.site/Log-Sage-d849bda5f98446ad91e31ff6d7f33795?pvs=4)
+## Development documenatations
+- https://engineering.toggl.com/docs/
 
 
 # Resources
