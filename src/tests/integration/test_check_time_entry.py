@@ -1,5 +1,5 @@
 import unittest
-from app.services.toggl_service import TogglService
+from app.services.quantification.toggl_service import TogglService
 from  app.config.configuration import Configuration
 
 class TestTogglAPI(unittest.TestCase):

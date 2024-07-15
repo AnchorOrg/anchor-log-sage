@@ -1,5 +1,5 @@
 import unittest
-from app.services.toggl_service import TogglService
+from app.services.quantification.toggl_service import TogglService
 
 # TODO: configure the test case so that I can click the play button to make it run 
 class TestTogglService(unittest.TestCase):
