@@ -9,7 +9,6 @@ class Configuration:
     def __init__(self, ):
         load_dotenv()
         self.username = os.getenv('USERNAME')
-
         self.ticktick_configuration = TickTickConfiguration()
         self.toggl_configuration = TogglConfiguration()
         self.googlefit_configuration = GoogleFitConfiguration()

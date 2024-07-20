@@ -14,7 +14,7 @@ class TestConfiguration(unittest.TestCase):
         # Create an instance of Configuration
         config = Configuration()
 
-        self.assertIsNotNone(config.toggl_api_token)
+        self.assertIsNotNone(config.toggl_configuration)
 
 
 if __name__ == '__main__':

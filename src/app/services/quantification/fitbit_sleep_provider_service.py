@@ -11,7 +11,7 @@ class FitbitSleepDataSource(ISleepDataProviderService):
     # ingz: refactoring the interface with the below 3 doc. 
     # https://dev.fitbit.com/build/reference/web-api/sleep/get-sleep-log-list/
     # https://dev.fitbit.com/build/reference/web-api/sleep/get-sleep-log-by-date-range/
-    # https://dev.fitbit.com/build/reference/web-api/sleep/get-sleep-log-by-date/
+    # https://dev.fitbit.com/build/reference/web-api/sleep/gopeet-sleep-log-by-date/
     def get_sleep_data(self, date):
         headers = {'Authorization': 'Bearer ' + self.access_token}
         response = requests.get(f'https://api.fitbit.com/1.2/user/-/sleep/date/{date}.json', headers=headers)
