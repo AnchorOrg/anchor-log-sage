@@ -1,5 +1,6 @@
 General things to do 
 # [notion page ](https://www.notion.so/lysander086/Data-ETL-and-get-API-to-gain-insights-2208732dc6fb48fa8fc1b426e1614421#359319ebcc8c4da48d11bc8e5d428015)
+[ ] deploy a rest controller to the GCP. 
 [ ] create the nuclear test to check the actaul effect
     [ ] getting sleep data 
         [x] creating crednetials 
