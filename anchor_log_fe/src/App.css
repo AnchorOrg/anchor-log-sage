@@ -1,0 +1,4 @@
+/* index.css or global CSS file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
