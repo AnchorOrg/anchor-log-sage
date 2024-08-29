@@ -1,19 +1,23 @@
-// App.js
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+
+import Login from './pages/Login'; 
+import Launch from './pages/Launch';
 
 function App() {
   return (
-    <div className="App flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <header className="App-header bg-white p-5 rounded-lg shadow-lg">
-        <h1 className="text-2xl text-gray-800">Welcome to Anchor log</h1>
-        <p className="text-lg text-gray-500">Sign in to your account and start building good life habits with anchor log</p>
-        <div className="buttons-container mt-5">
-          
-          {/* <button className="sign-in-button google bg-blue-500 text-white m-2 px-5 py-2 text-lg rounded-md cursor-pointer">Sign in with Google</button>
-          <button className="sign-in-button apple bg-black text-white m-2 px-5 py-2 text-lg rounded-md cursor-pointer">Sign in with Apple</button> */}
-        </div>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/launch" element={<Launch />} />
+        <Route path="*" element={<Navigate to="/launch" />} /> 
+      </Routes>
+    </Router>
   );
 }
 
