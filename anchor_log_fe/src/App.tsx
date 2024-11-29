@@ -1,24 +1,17 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate
-} from "react-router-dom";
-import { Provider } from "./components/ui/provider"
-
-import LoginRegister from './pages/LoginRegister'; 
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import LoginRegister from './pages/LoginRegister';
 import Launch from './pages/Launch';
+import Auth from './components/Auth';
+import RouteConfig from './RouteConfig';
+function App() { 
 
-function App() {
+
   return (
-    <Provider>
-    <Router>
-      <Routes>
-        <Route path="/login" element={<LoginRegister />} />
-        <Route path="/launch" element={<Launch />} />
-        <Route path="*" element={<Navigate to="/launch" />} /> 
-      </Routes>
-    </Router></Provider>
+    <Auth>
+      <RouteConfig>
+      </RouteConfig>
+    </Auth>
   );
 }
 

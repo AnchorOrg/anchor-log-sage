@@ -3,194 +3,172 @@ import {
   Box,
   Button,
   Container,
-  Flex,
-  Heading,
-  Input,
+  Divider,
+  FormControl,
+  FormLabel,
   Link,
   Stack,
-  Text,
-  VStack,
-  ChakraProvider,
-} from "@chakra-ui/react";
+  TextField,
+  Typography,
+} from '@mui/material';
+import { FaApple, FaGoogle, FaUser } from 'react-icons/fa';
+
 function LoginRegister() {
   return (
-    <Box bg="gray.50" minH="100vh" py={4} w="100%">
-    <Box h="32px" />
-    <Container maxW="512px">
-      <VStack
-        as="form"
-        spacing={4}
-        filter="drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))"
-        h="1178px"
-        justify="center"
-      >
-        <Box
-          bg="white"
-          borderRadius="12px"
-          border="1px solid"
-          borderColor="gray.200"
-          p={4}
-          w="full"
+    <Box
+      sx={{
+        bgcolor: 'grey.100',
+        minHeight: '100vh',
+        py: 4,
+        width: '100%',
+      }}
+    >
+      <Box height="32px" />
+      <Container maxWidth="sm">
+        <Stack
+          component="form"
+          spacing={4}
+          sx={{
+            filter: 'drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08))',
+            height: '1178px',
+            justifyContent: 'center',
+          }}
         >
-          <Icon1 w="40px" h="40px" mx="auto" my={2} />
-
-          <Heading as="h2" size="md" textAlign="center" mb={2}>
-            Welcome back.
-          </Heading>
-
-          <Text textAlign="center" mb={8}>
-            We sure are glad to see you again.
-          </Text>
-          <Stack spacing={2} mb={4}>
-            <Link
-              href="/accounts/apple/login/?process=login"
-              display="flex"
-              alignItems="center"
-              h="38px"
-              px={4}
-              py={2}
-              border="1px solid"
-              borderColor="gray.200"
-              borderRadius="lg"
-              bg="white"
-              color="gray.700"
-              fontWeight="500"
-              position="relative"
-              boxShadow="sm"
-              _hover={{
-                textDecoration: "none",
+          <Box
+            sx={{
+              bgcolor: 'white',
+              borderRadius: 2,
+              border: 1,
+              borderColor: 'grey.300',
+              p: 2,
+              width: '100%',
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                my: 2,
               }}
             >
-              <Box position="absolute">
-                <Icon2 w="16px" h="16px" />
-              </Box>
-              <Text flex={1} textAlign="center">
+              <FaUser size={40} />
+            </Box>
+
+            <Typography variant="h5" textAlign="center" gutterBottom>
+              Welcome back.
+            </Typography>
+
+            <Typography textAlign="center" mb={3}>
+              We sure are glad to see you again.
+            </Typography>
+
+            <Stack spacing={2} mb={4}>
+              <Button
+                href="/accounts/apple/login/?process=login"
+                variant="outlined"
+                startIcon={<FaApple />}
+                sx={{
+                  height: '38px',
+                  color: 'grey.700',
+                  textTransform: 'none',
+                }}
+              >
                 Log in with Apple
-              </Text>
-            </Link>
+              </Button>
 
-            <Link
-              href="/accounts/google/login/?process=login"
-              display="flex"
-              alignItems="center"
-              h="38px"
-              px={4}
-              py={2}
-              border="1px solid"
-              borderColor="gray.200"
-              borderRadius="lg"
-              bg="white"
-              color="gray.700"
-              fontWeight="500"
-              position="relative"
-              boxShadow="sm"
-              _hover={{
-                textDecoration: "none",
+              <Button
+                href="/accounts/google/login/?process=login"
+                variant="outlined"
+                startIcon={<FaGoogle />}
+                sx={{
+                  height: '38px',
+                  color: 'grey.700',
+                  textTransform: 'none',
+                }}
+              >
+                Log in with Google
+              </Button>
+            </Stack>
+
+            <Box
+              sx={{
+                position: 'relative',
+                my: 3,
               }}
             >
-              <Box position="absolute">
-                <Icon3 w="16px" h="16px" />
-              </Box>
-              <Text flex={1} textAlign="center">
-                Log in with Google
-              </Text>
-            </Link>
-          </Stack>
+              <Divider />
+              <Typography
+                variant="caption"
+                sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  bgcolor: 'white',
+                  px: 1,
+                  textTransform: 'uppercase',
+                  color: 'grey.500',
+                }}
+              >
+                Or
+              </Typography>
+            </Box>
 
-          <Box position="relative" my={4}>
-            <Divider />
-            <Text
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate(-50%, -50%)"
-              bg="white"
-              px={2}
-              fontSize="xs"
-              textTransform="uppercase"
-              color="gray.400"
-            >
-              Or
-            </Text>
-          </Box>
-
-          <Stack as="form" mt={5} spacing={4}>
-            <FormControl
-              borderBottom="1px solid"
-              borderColor="gray.200"
-              pb={4}
-            >
-              <Flex justify="space-between" mb={2}>
-                <FormLabel htmlFor="username" m={0}>
-                  Username
-                </FormLabel>
-                <Link
-                  href="/register"
-                  color="blue.500"
-                  textDecoration="underline"
-                >
+            <Stack spacing={3}>
+              <FormControl fullWidth>
+                <FormLabel>Username</FormLabel>
+                <TextField
+                  id="username"
+                  type="text"
+                  autoComplete="username"
+                  variant="outlined"
+                  size="small"
+                />
+                <Link href="/register" sx={{ fontSize: 14, mt: 1, textDecoration: 'underline', color: 'primary.main' }}>
                   Don't have an account?
                 </Link>
-              </Flex>
-              <Input
-                id="username"
-                type="text"
-                autoComplete="username"
-                bg="gray.50"
-                borderRadius="lg"
-              />
-            </FormControl>
+              </FormControl>
 
-            <FormControl
-              borderBottom="1px solid"
-              borderColor="gray.200"
-              pb={4}
-            >
-              <Flex justify="space-between" mb={2}>
-                <FormLabel htmlFor="password" m={0}>
-                  Password
-                </FormLabel>
+              <FormControl fullWidth>
+                <FormLabel>Password</FormLabel>
+                <TextField
+                  id="password"
+                  type="password"
+                  autoComplete="current-password"
+                  variant="outlined"
+                  size="small"
+                />
                 <Link
                   href="/accounts/password/reset/"
-                  color="blue.500"
-                  textDecoration="underline"
+                  sx={{ fontSize: 14, mt: 1, textDecoration: 'underline', color: 'primary.main' }}
                 >
                   Forgot your password?
                 </Link>
-              </Flex>
-              <Input
-                id="password"
-                type="password"
-                autoComplete="current-password"
-                bg="gray.50"
-                borderRadius="lg"
-              />
-            </FormControl>
+              </FormControl>
 
-            <Button
-              isDisabled
-              h="38px"
-              border="1px solid"
-              borderColor="gray.200"
-              borderRadius="lg"
-              bg="white"
-              color="gray.700"
-              opacity={0.5}
-              _disabled={{
-                opacity: 0.5,
-                cursor: "not-allowed",
-              }}
-              boxShadow="sm"
-            >
-              Log in with username
-            </Button>
-          </Stack>
-        </Box>
-      </VStack>
-    </Container>
-  </Box>
+              <Button
+                variant="contained"
+                disabled
+                sx={{
+                  height: '38px',
+                  bgcolor: 'grey.300',
+                  color: 'white',
+                  boxShadow: 1,
+                  '&:disabled': {
+                    opacity: 0.5,
+                    cursor: 'not-allowed',
+                  },
+                }}
+              >
+                Log in with username
+              </Button>
+            </Stack>
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
   );
 }
 
 export default LoginRegister;
-
