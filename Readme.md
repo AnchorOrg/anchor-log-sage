@@ -2,7 +2,7 @@
 - Responsibilities
   - Reduce time of retrospecting past
   - provide data-driven insights on how to improve the usage status of one's time.
-  - need to swtich this to a task management platform, integrating the time tracking, price: 3000円 in JP
+  - need to swtich this to a task management platform, integrating the time tracking, AI, price: 3000円 in JP
   
 
 ## Resources
